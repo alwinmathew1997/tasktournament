@@ -1,0 +1,81 @@
+[
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "gameId", "type": "uint256" }
+    ],
+    "name": "CheckUserJoined",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "numPlayers", "type": "uint256" },
+      { "internalType": "uint256", "name": "winningScore", "type": "uint256" },
+      { "internalType": "uint256", "name": "duration", "type": "uint256" }
+    ],
+    "name": "createGame",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "games",
+    "outputs": [
+      { "internalType": "uint256", "name": "numPlayers", "type": "uint256" },
+      { "internalType": "uint256", "name": "winningScore", "type": "uint256" },
+      { "internalType": "uint256", "name": "endTime", "type": "uint256" },
+      { "internalType": "bool", "name": "ended", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "gameId", "type": "uint256" }
+    ],
+    "name": "getLeaderboard",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "name", "type": "address" },
+          { "internalType": "uint256", "name": "score", "type": "uint256" }
+        ],
+        "internalType": "struct Tournament.Player[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "gameId", "type": "uint256" }
+    ],
+    "name": "joinGame",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "numGames",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "gameId", "type": "uint256" },
+      { "internalType": "uint256", "name": "score", "type": "uint256" }
+    ],
+    "name": "recordScore",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
